@@ -31,7 +31,7 @@ app.get("/beasts/:id", (req, res) => {
     if(0 <= req.params.id && req.params.id < beasts.length){
         const filtered = beasts.filter(b => b.id == req.params.id);
         res.send(filtered[0])
-    } else {
+    } else {``
         res.status(404).send({ error: "This beast is extinct." })
     }
 
