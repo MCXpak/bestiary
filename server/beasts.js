@@ -1,6 +1,6 @@
 const beasts = [
     { id: 0, name: "Medusa", habit: "Greek islands", dangerRating: 5, description: "A gorgon", encounterRate: 0.1, loot: ["snakes", "stone"] },
-    { id: 1, name: "Cyclops", habit: "Greek islands", dangerRating: 3, description: "A one-eyed giant", encounterRate: 0.05, loo: ["a giant eye", "sheep", "blood"] },
+    { id: 1, name: "Cyclops", habit: "Greek islands", dangerRating: 3, description: "A one-eyed giant", encounterRate: 0.05, loot: ["a giant eye", "sheep", "blood"] },
     { id: 2, name: "Minotaur", habit: "A Maze", dangerRating: 3, description: "Half-bull, half-man", encounterRate: 0.4, loot: ["bull meat", "sword"] },
     { id: 3, name: "Minotaur", habit: "A Maze", dangerRating: 3, description: "Half-bull, half-man", encounterRate: 0.4, loot: ["bull meat", "sword"] },
     { id: 4, name: "Pegasus", habit: "Greece", dangerRating: 4, description: "A horse with wings", encounterRate: 0.01, loot: ["wings", "horse meat"] },
