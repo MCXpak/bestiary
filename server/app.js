@@ -27,8 +27,15 @@ app.get("/beasts/random", (req, res) => {
 })
 
 app.get("/beasts/:id", (req, res) => {
-    const filtered = beasts.filter(b => b.id == req.params.id);
-    res.send(filtered[0])
+
+    if(0 <= req.params.id && req.params.id < beasts.length){
+        const filtered = beasts.filter(b => b.id == req.params.id);
+        res.send(filtered[0])
+    } else {
+        res.status(404).send({ error: "This beast is extinct." })
+    }
+
+    
 })
 
 app.post("/beasts", (req, res) => {
