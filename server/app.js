@@ -33,7 +33,7 @@ app.get('/delete/:name', (req, res) => {
     const name = req.params.name
     for (const beast of beasts) {
         console.log(beast.name)
-        if(beast.name.toLowerCase() == name) {console.log(beast); beasts.splice(beasts.indexOf(beast),beasts.indexOf(beast))}
+        if(beast.name.toLowerCase() == name) {console.log(beast); beasts.splice(beasts.indexOf(beast),1)}
     }
     res.send("Done")
 })
