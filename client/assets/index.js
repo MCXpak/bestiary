@@ -1,4 +1,3 @@
-
 const getBeastData = async () => {
 
      // Reach out to the API
@@ -25,15 +24,20 @@ const displayBeastData = async () => {
 
         // Create an HTML element
         const li = document.createElement("li");
+        const link = document.createElement("a");
 
         // Set the element's content
-        li.textContent = beast["name"]; 
+        link.textContent = beast["name"]; 
+        link.href = `beast.html?id=${beast["id"]}`;
+        link.name = beast["name"].toLowerCase();
+
+        // Add the link to the element
+        li.appendChild(link)
 
         // Add the element to the cage
         cage.appendChild(li);
 
     }
-
 }
 
 const createNewBeast = async (e) => {
@@ -46,9 +50,6 @@ const createNewBeast = async (e) => {
         name: e.target.name.value,
         encounterRate: e.target.encounterRate.value
     }
-
-    console.log("this is data", data)
-   
 
     // Set the options for the fetch request
     const options = {
@@ -64,8 +65,13 @@ const createNewBeast = async (e) => {
 
     if (res.status == 201) {
         alert("Creature created successfully!");
+        window.location.reload();
     }
 
+}
+
+const deleteBeast = (e) => {
+    
 }
 
 const form = document.querySelector('#create-form');
